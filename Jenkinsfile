@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        AZURE_CREDENTIALS_ID = 'azure-service-principal'
+        AZURE_CREDENTIALS_ID = 'azure-service-principal-py'
         RESOURCE_GROUP = 'rg-jenkins'
-        APP_SERVICE_NAME = 'jenkinspythonfastapi123'
+        APP_SERVICE_NAME = 'jenkinspythonfastapi123876857'
         PYTHON_EXE = 'C:\\Users\\rajsi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe' 
     }
 
@@ -40,10 +40,10 @@ pipeline {
 
     post {
         success {
-            echo '🎉 Deployment Successful!'
+            echo 'Deployment Successful!'
         }
         failure {
-            echo '❌ Deployment Failed!'
+            echo 'Deployment Failed!'
         }
     }
 }
