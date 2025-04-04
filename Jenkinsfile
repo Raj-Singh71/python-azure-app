@@ -19,6 +19,7 @@ pipeline {
             steps {
                 bat "${PYTHON_EXE} -m venv venv"
                 bat ".\\venv\\Scripts\\pip install fastapi uvicorn gunicorn"
+                 bat ".\\venv\\Scripts\\pip freeze > requirements.txt"
             }
         }
 
