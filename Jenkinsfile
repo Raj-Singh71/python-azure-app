@@ -34,7 +34,8 @@ pipeline {
             steps {
                 withCredentials([azureServicePrincipal(credentialsId: AZURE_CREDENTIALS_ID)]) {
                     bat "az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID"
-                    bat "az webapp config set --resource-group $RESOURCE_GROUP --name $APP_SERVICE_NAME --startup-file=\\\"python -m uvicorn main:app --host 0.0.0.0 --port 8000\\\""
+                    bat "az webapp config set --resource-group $RESOURCE_GROUP --name $APP_SERVICE_NAME --startup-file=\"python -m uvicorn main:app --host 0.0.0.0 --port 8000\""
+
 
                     bat "az webapp deploy --resource-group $RESOURCE_GROUP --name $APP_SERVICE_NAME --src-path pythonapp.zip --type zip"
                 }
