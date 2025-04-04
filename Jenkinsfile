@@ -18,7 +18,7 @@ pipeline {
         stage('Setup Python Environment') {
             steps {
                 bat "${PYTHON_EXE} -m venv venv"
-                bat ".\\venv\\Scripts\\pip install fastapi uvicorn"
+                bat ".\\venv\\Scripts\\pip install fastapi uvicorn gunicorn"
             }
         }
 
