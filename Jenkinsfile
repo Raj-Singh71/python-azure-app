@@ -24,7 +24,9 @@ pipeline {
 
         stage('Package App') {
             steps {
-                bat 'powershell Compress-Archive -Path main.py, requirements.txt -DestinationPath pythonapp.zip -Force'
+                bat 'powershell Compress-Archive -Path * -DestinationPath pythonapp.zip -Force'
+
+                //bat 'powershell Compress-Archive -Path main.py, requirements.txt -DestinationPath pythonapp.zip -Force'
             }
         }
 
