@@ -40,6 +40,7 @@ pipeline {
                     // Correct Linux-compatible startup command
                     bat "az webapp config set --resource-group $RESOURCE_GROUP --name $APP_SERVICE_NAME --startup-file \"gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:8000\""
 
+
                     // Deploy the zip
                     bat "az webapp deploy --resource-group $RESOURCE_GROUP --name $APP_SERVICE_NAME --src-path pythonapp.zip --type zip"
 
