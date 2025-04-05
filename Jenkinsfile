@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        AZURE_CREDENTIALS_ID = 'azure-service-principal-py'
+        AZURE_CREDENTIALS_ID = 'azure-service-principal-p'
         RESOURCE_GROUP = 'rg-jenkins'
-        APP_SERVICE_NAME = 'jenkinspythonfastapi123876857'
+        APP_SERVICE_NAME = 'jenkinspythonfastapi12387685'
         PYTHON_EXE = 'C:\\Users\\rajsi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe' 
     }
 
